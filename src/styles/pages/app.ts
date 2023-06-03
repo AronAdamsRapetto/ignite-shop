@@ -1,4 +1,5 @@
 import { styled } from '..'
+import * as Dialog from '@radix-ui/react-dialog'
 
 export const Container = styled('div', {
   display: 'flex',
@@ -29,6 +30,10 @@ export const NavContainer = styled('nav',  {
     background: '$gray800',
     borderRadius: 6,
     color: '$gray500',
+
+    '&:hover': {
+      cursor: 'pointer',
+    }
   },
 
   div: {
