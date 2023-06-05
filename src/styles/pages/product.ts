@@ -66,7 +66,8 @@ export const ProductDetails = styled('div', {
 
     '&:disabled': {
       opacity: 0.6,
-      cursor: 'wait',
+      // cursor: 'wait',
+      cursor: 'not-allowed'
     },
 
     '&:not(:disabled):hover': {

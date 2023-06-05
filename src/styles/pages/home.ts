@@ -14,7 +14,6 @@ export const Product = styled('div', {
   background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
   borderRadius: 8,
   paddign: '1.5rem',
-  cursor: 'pointer',
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
@@ -22,7 +21,8 @@ export const Product = styled('div', {
   overflow: 'hidden',
 
   img: {
-    objectFit: 'cover'
+    objectFit: 'cover',
+    cursor: 'pointer',
   },
 
   footer: {
@@ -71,9 +71,14 @@ export const Product = styled('div', {
       borderRadius: 6,
       color: '$white',
 
-      '&:hover': {
+      '&:not(:disabled):hover': {
         cursor: 'pointer',
         background: '$green300',
+      },
+
+      '&:disabled': {
+        opacity: '0.6',
+        cursor: 'not-allowed',
       }
     }
   },

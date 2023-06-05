@@ -81,10 +81,12 @@ export const ProductCardContainer = styled('div', {
 
 export const ImageContainer = styled('div', {
   background: 'linear-gradient(180deg, #1EA483 0%, #7465D4 100%)',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   borderRadius: 8,
   width: 101,
-  height: '100%',
-  maxHeight: 120,
+  height: 110,
 })
 
 export const ProductInfoContainer = styled('div', {
@@ -109,8 +111,8 @@ export const ProductInfoContainer = styled('div', {
     background: 'transparent',
     color: '$green500',
     fontWeight: 'bold',
-    marginTop: '0.5rem',
     fontSize: '1rem',
+    marginTop: 'auto',
 
     '&:hover': {
       cursor: 'pointer',
@@ -118,6 +120,16 @@ export const ProductInfoContainer = styled('div', {
     }
   }
 })
+
+export const EmptyCartContainer = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  height: '100%',
+  color: '$gray500',
+  gap: '0.875rem',
+}) 
 
 export const SummaryContainer = styled('div', {
   display: 'flex',
@@ -134,6 +146,11 @@ export const SummaryContainer = styled('div', {
     fontSize: '$md',
     lineHeight: 1.6,
     color: '$white',
+
+    '&:hover': {
+      background: '$green300',
+      cursor: 'pointer',
+    }
   }
 })
 
