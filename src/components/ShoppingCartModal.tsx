@@ -9,7 +9,7 @@ import { CartDetails } from 'use-shopping-cart/core'
 
 export default function ShoppingCartModal() {
   const [isCreatingCheckoutSession, setIsCreatingCheckoutSession] = useState(false)
-  const { formattedTotalPrice, cartDetails, cartCount, removeItem } = useShoppingCart()
+  const { formattedTotalPrice, cartDetails, cartCount, removeItem, clearCart } = useShoppingCart()
   const cartProducts = Object.values(cartDetails as CartDetails)
 
   const handleCheckout = async () => {
@@ -21,7 +21,7 @@ export default function ShoppingCartModal() {
       })
 
       const { checkoutUrl } = response.data
-
+      
       window.location.href = checkoutUrl
     } catch (err) {
       // Conectar a uma ferramento e observabilidade ( Datadog / Sentry )
